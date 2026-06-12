@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Birthday Quest For Bebe ღ</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Awan -->
+<div class="cloud cloud1">☁️</div>
+<div class="cloud cloud2">☁️</div>
+<div class="cloud cloud3">☁️</div>
+
+<!-- OPENING -->
+<section id="opening" class="screen active">
+
+<h1> Happy Birthday My Love♡</h1>
+
+<h2>Usamah Ikhwana Fadhlih ♥︎</h2>
+
+<p>
+sayangg maaf cuman ini hadiah yang bisa aku kasihh, and so sorry if this is not perfect babyy.
+</p>
+
+<p>
+okee now, ada beberapa yang harus kamu selesaikan sayang, udah siyapp belomm haha.. siap ga siap harus siap!!!
+</p>
+
+<button onclick="
+document.getElementById('bgMusic').play();
+showScreen('security');
+">
+🚀 Start Adventure
+</button>
+
+</section>
+
+<!-- SECURITY -->
+<section id="security" class="screen">
+
+<h1>🔐 Security Check</h1>
+
+<p>
+Masukkan nama panggilan yang biasa aku sebut ke kamu
+</p>
+
+<input
+type="text"
+id="nickname"
+placeholder="Ketik di sini">
+
+<br>
+
+<button onclick="checkNickname()">
+Masuk
+</button>
+
+</section>
+
+<!-- HEART GAME -->
+<section id="heartGame" class="screen">
+
+<h1>❤️ Catch My Heart</h1>
+
+<p>Klik hati yang bergerak!</p>
+
+<div id="heart">❤️</div>
+
+</section>
+
+<!-- MEMORY ROOM -->
+<section id="memoryRoom" class="screen">
+
+<h1>🚪 Memory Room</h1>
+
+<div class="memory-grid">
+
+<div class="memory-card"
+onclick="showMemory('foto1.jpg.jpeg','aku dan kamu mulai deket di mbkm ini, udh kenal sebenernya kenal nama doang dari awal kuliah wkwk tapi mulai deketnya disini di mbkm ini ♥︎')">
+🌙 First Meet
+</div>
+
+<div class="memory-card"
+onclick="showMemory('foto7.jpg.jpeg.jpeg','ini foto dimana kita keluar bareng pertama kalinya disini kamu nembak aku lagi dan aku terima xixi')">
+☁️ First Date
+</div>
+
+<div class="memory-card"
+onclick="showMemory('foto5.jpg.jpeg','part yang paling aku suka yaitu kemanapun dan dimanapun selalu sama kamuu ♡')">
+✨Momen favorit
+</div>
+
+<div class="memory-card"
+onclick="showMemory('foto4.jpg.jpeg','ini momen yang sangat berkesan karena kita berdua telah menyelesaikan pendidikan bersama ❤️')">
+♡ Foto yang berkesan
+</div>
+
+</div>
+
+<div id="memoryContent"></div>
+
+<button onclick="showScreen('quiz')">
+Lanjut ❤️
+</button>
+
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" class="screen">
+
+<h1>🤭 Love Quiz</h1>
+
+<p>Siapa yang paling BAWEL?</p>
+
+<button onclick="wrongAnswer()">
+Aku
+</button>
+
+<button onclick="wrongAnswer()">
+Kamu
+</button>
+
+<button onclick="correctAnswer()">
+KITA BERDUA 
+</button>
+
+</section>
+
+<!-- PUZZLE -->
+<section id="puzzle" class="screen">
+
+<h1>🧩 Puzzle Foto</h1>
+
+<p>
+Tebak minuman apa yang langsung kepikiran kalo kamu liat aku!!!! 
+</p>
+
+<h2> M_T_H_D_P_N </h2>
+
+<input
+type="text"
+id="puzzleAnswer"
+placeholder="Jawaban">
+
+<br>
+
+<button onclick="checkPuzzle()">
+Cek Jawaban
+</button>
+
+</section>
+
+<!-- SECRET ROOM -->
+<section id="secret" class="screen">
+
+<h1> Hai Sayang...ღ</h1>
+
+<p id="typingText"></p>
+
+<button onclick="showScreen('ending')">
+💌 Next
+</button>
+
+</section>
+
+<!-- ENDING -->
+<section id="ending" class="screen">
+
+<h1> HAPPY BIRTHDAY BEBE ღ</h1>
+
+<img src="foto6.jpg.jpeg" class="ending-photo">
+
+<h2> ♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎♥︎ </h2>
+
+<p id="countdown"></p>
+
+<button onclick="showLoveMessage()">
+💌 One More Message
+</button>
+
+<div id="lastMessage"></div>
+
+</section>
+
+<audio id="bgMusic" loop>
+    <source src="musik.mpeg" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
